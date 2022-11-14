@@ -1,3 +1,4 @@
+import { HStack,Button,Text ,useColorMode} from '@chakra-ui/react';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../contexs/AuthProvider';
@@ -9,7 +10,7 @@ function Header() {
 	
 	// const { isLogged, setIsLogged } = useContext(AuthContext);
 	const { state, dispatch } = useContext(AuthContext)
-
+	const { colorMode } = useColorMode();
 
 	function logOut() {
 		cookies.remove('token');
@@ -23,11 +24,11 @@ function Header() {
 	return (
 		<nav >
 
-			<div className='lo'>
+			<HStack className='lo' p='3' bg={colorMode === "light" ? "green.500" : "blue.800"} shadow='md'>
 				{state.isLogged && <Link to="/" >Main</Link>}
-				{state.isLogged && <button >{cookies.load('username')}</button>}
-				{state.isLogged && <Link to="/login" onClick={logOut}>Logout</Link>}
-			</div>
+				{state.isLogged && <Button >{cookies.load('username')}</Button>}
+				{state.isLogged && <Text to="/login" onClick={logOut}>Logout</Text>}
+			</HStack>
 		</nav>
 	)
 }

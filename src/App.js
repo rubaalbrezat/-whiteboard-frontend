@@ -8,11 +8,12 @@ import ThemeProvider from './contexs/ThemeProvider';
 import Login from './components/Login';
 import AuthProvider from './contexs/AuthProvider';
 import RefreshProvider from './contexs/RefreshProvider';
-
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { IconButton,useColorMode} from '@chakra-ui/react'
 
 
 function App() {
-
+	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
 		<RefreshProvider>
@@ -20,6 +21,15 @@ function App() {
 				<ThemeProvider>
 					<BrowserRouter>
 						<Header />
+						<IconButton
+
+				colorScheme='teal'
+				aria-label='Send email'
+				icon={colorMode === 'light' ? <FaSun /> : <FaMoon />}
+				onClick={toggleColorMode}
+				alignSelf='flex-end'
+			
+			/>
 						<Routes >
 							<Route exact path="/" element={<Main />}></Route>
 							<Route exact path="/login" element={<Login />}></Route>

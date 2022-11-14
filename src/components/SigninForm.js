@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import axios from 'axios';
 import base64 from 'base-64';
+import { Input  } from '@chakra-ui/react';
 import { Link, Navigate } from 'react-router-dom';
 import { AuthContext } from '../contexs/AuthProvider';
 import cookies from "react-cookies";
 import { actions } from '../reducers/actionTypes';
+
 
 
 function SigninForm() {
@@ -20,8 +22,9 @@ function SigninForm() {
 		const encoded = base64.encode(`${username}:${password}`);
 		const basicAuth = { headers: { authorization: `Basic ${encoded}` } };
 		const axiosRespose = await axios.post(url, {}, basicAuth);
+		
 		console.log(axiosRespose.data)
-
+		
 		const token = axiosRespose.data.token;
 		if (token) {
 			cookies.save(`token`, token);
@@ -43,9 +46,9 @@ function SigninForm() {
 			<form onSubmit={login}>
 				<fieldset className='fs'>
 					<legend>Login</legend>
-					<input type='text' className='formField' placeholder='Username' id='usernameli' required></input>
-					<input type='password' className='formField' placeholder='Password' id='passwordli' required autoComplete='off'></input>
-					<input type='submit' className='button' value='login' autoComplete='off' ></input>
+					<Input type='text' className='formField' placeholder='Username' id='usernameli' required></Input>
+					<Input type='password' className='formField' placeholder='Password' id='passwordli' required autoComplete='off'></Input>
+					<Input type='submit' className='button' value='login' autoComplete='off' ></Input>
 				</fieldset>
 			</form>
 	)

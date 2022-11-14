@@ -1,16 +1,17 @@
 import React from 'react'
+import {Text,Heading,HStack,Stack} from '@chakra-ui/react';
 
 function CommentsHolder({ comments }) { 
   return (
-    <div>
+    <Stack>
       {comments.map((comment, index) => (         
-        <div key={index}>
-          <p> By User: {comment.userId}</p>
-          <h4>{comment.content}</h4>
+        <HStack key={index}>
+          <Text> By User: {comment.userId}</Text>
+          <Heading>{comment.content}</Heading>
           <hr></hr>
-        </div>
+        </HStack>
       ))}
-    </div>
+    </Stack>
   )
 }
 

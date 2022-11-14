@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import cookies from 'react-cookies';
+import {Text,HStack} from '@chakra-ui/react'
 import { themeContext } from '../contexs/ThemeProvider';
 
 
@@ -14,9 +15,9 @@ function About() {
   }, []);
 
   return (
-    <div>
-      <p>Hello im ruba </p>
-    </div>
+    <HStack>
+      <Text>Hello im ruba </Text>
+    </HStack>
   )
 }
 
