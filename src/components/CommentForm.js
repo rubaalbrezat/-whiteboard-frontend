@@ -24,7 +24,7 @@ function CommentForm({ postID }) {
   return (
     <form onSubmit={addComment} className='form' m='50'>
       <Input type='text' id='newComment'  placeholder='Add your comment' required></Input>
-      <Input type='submit' value='comment' ></Input>
+      <Input type='submit' value='comment' bg={'primary.200'}></Input>
     </form>
   )
 }

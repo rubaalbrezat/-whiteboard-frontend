@@ -30,7 +30,7 @@ function SignupForm() {
 				<Input type='text' className='formField' placeholder='E-mail' id='email' required></Input>
 				<Input type='password' className='formField' placeholder='Password' id='passwordsu' required></Input>
 				<Input type='password' className='formField' placeholder='Confirm Password' id='confirmPassword' required autoComplete='off'></Input>
-				<Input type='submit' className='button' value='signUp' ></Input>
+				<Input type='submit' className='button' value='signUp' bg='secondery.400'></Input>
 			</fieldset>
 		</form>
 	)

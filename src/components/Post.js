@@ -76,12 +76,12 @@ function Post({ postData }) {
 				<>
 					<HStack>
 						<Button onClick={deletePost} bg={colorMode === "light" ? "blue.800" : "blue.200"}
-							color={colorMode === "light" ? "pink.200" : "pink.800"}
-							_hover={{ bg: colorMode === "light" ? "pink.700" : "pink.300" }}
+							color={colorMode === "light" ? "green.200" : "green.800"}
+							_hover={{ bg: colorMode === "light" ? "green.700" : "green.300" }}
 							ml="1rem" >delete</Button>
 						<Button onClick={() => setShowModal(true)} bg={colorMode === "light" ? "blue.800" : "blue.200"}
-							color={colorMode === "light" ? "pink.200" : "pink.800"}
-							_hover={{ bg: colorMode === "light" ? "pink.700" : "pink.300" }}
+							color={colorMode === "light" ? "green.200" : "green.800"}
+							_hover={{ bg: colorMode === "light" ? "green.700" : "green.300"  }}
 							ml="1rem">Update</Button>
 					</HStack>
 				</>

@@ -38,7 +38,7 @@ function AddPostForm() {
 			<br></br>
 			<Input type='text' placeholder='Content' name='content' id='tttC' required></Input>
 			<br></br>
-			<Input type='submit' value='Post' id='tttS'></Input>
+			<Input type='submit' value='Post' id='tttS' bg={'primary.200'}></Input>
 		</form>
 	)
 }
