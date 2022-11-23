@@ -7,7 +7,7 @@ export const initState = {
 	err: '',
 }
 
-export const authReducer = (state, action) => {
+export const authReducer = (state , action) => {
 	const { type, payload } = action;
 	switch (type) {
 		case actions.SIGNUP_SUCCESS:

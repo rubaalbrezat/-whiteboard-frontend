@@ -5,7 +5,7 @@ export const initState = {
 
 }
 
-export const RefsherReducer = (state, action) => {
+export const RefsherReducer = (state , action) => {
 	const { type, payload } = action;
 
 	switch (type) {
