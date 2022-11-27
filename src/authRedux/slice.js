@@ -5,15 +5,15 @@ const initState = {
 	isAuth: false,
 	isLogged: false,
 	err: '',
-}
+};
 
-export const authRedux = createSlice({
+export const authRedux = createSlice( {
 
 	name: 'redux',
 	initState,
 	reducers: {
 		SIGNUP: (state, action) => {
-			state.showSignIn = true,
+			state.showSignIn = true;
 				state.err = ''
 
 		},
